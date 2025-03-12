@@ -5,5 +5,5 @@ variable "project_id" {
 
 variable "name" {
   type        = string
-  description = "Names of the service accounts to create."
+  description = "Names of the datastore to create."
 }
