@@ -1,5 +1,5 @@
 locals {
-  import = "${var.import == true ? ["conditional" = "importhack"] : []}"
+  import = "${var.import == true ? ["conditionalimporthack"] : []}"
 }
 
 import {
