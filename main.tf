@@ -1,4 +1,4 @@
-resource "google_firestore_database" "datastore_database" {
+resource "google_firestore_database" "database" {
   project                 = var.project_id
   name                    = var.name
   location_id             = "eur3"
