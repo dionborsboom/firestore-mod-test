@@ -11,11 +11,24 @@ variable "name" {
 variable "pitr" {
   type        = string
   description = "Whether to enable the PITR feature on this database."
-  #default     = false
+  default     = "POINT_IN_TIME_RECOVERY_DISABLED"
 }
 
 variable "import" {
   type        = bool
   description = "Enable / disable the terraform import."
-  #default     = false
+  default     = false
+}
+
+variable "indexes" {
+  type        = set(object({
+    kind        = string
+    ancestor    = bool
+    properties  = set(object({
+      name = string
+      direction = string
+    }))
+  }))
+  description = "Set of objects containing indexes."
+  default     = []
 }
