@@ -23,7 +23,7 @@ variable "import" {
 variable "indexes" {
   type        = set(object({
     kind        = string
-    ancestor    = bool
+    ancestor    = optional(bool)
     properties  = set(object({
       name = string
       direction = string
